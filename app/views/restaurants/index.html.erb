@@ -1,12 +1,23 @@
 <div class="container">
-<div class="col-9 mb-3">
-<h1>Restaurants</h1>
- <% @restaurants.each do |restaurant| %>
+<div class="row">
+<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+<h1 class ="mb-4">Restaurants</h1>
+<h3 class = "mb-3"> <%= link_to  "Add a restaurant", new_restaurant_path%> </h3>
+</div>
+<% @restaurants.each do |restaurant| %>
 <ul>
-<li>
-<%= link_to restaurant.name, restaurant_path(restaurant) %>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src='https://picsum.photos/200/150?random=' alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">
+    <li class ="list-unstyled mb-5">
+<h2> <%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
 </li>
+    </p>
+  </div>
+</div>
 </ul>
 <% end %>
+</div>
 </div>
 </div>

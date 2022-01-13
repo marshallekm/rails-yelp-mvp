@@ -1,7 +1,14 @@
-<%= simple_form_for(@restaurant) do |f| %>
-<%= f.input :name %>
-<%= f.input :address %>
-<%= f.input :phone_number %>
-<%= f.input :category, :collection => %w[chinese italian japanese french belgium] %>
-<%= f.submit 'Create' class:"btn btn-primary" %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="mt-5 mx-auto">
+      <%= simple_form_for(@restaurant) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :phone_number %>
+        <%= f.input :category, :collection => %w[chinese italian japanese french belgium] %>
+        <%= f.submit 'Create', class:"btn btn-primary" %>
+      <% end %>
+      <h4 class = "mt-5"><%= link_to  "Back", root_path %></h4>
+    </div>
+  </div>
+</div>
